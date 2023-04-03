@@ -136,7 +136,7 @@ function _Home() {
 
         <div className={styles["sidebar-tail"]}>
           <div className={styles["sidebar-actions"]}>
-            <div className={styles["sidebar-action"] + " " + styles.mobile}>
+            {/* <div className={styles["sidebar-action"] + " " + styles.mobile}>
               <IconButton
                 icon={<CloseIcon />}
                 onClick={() => {
@@ -145,7 +145,7 @@ function _Home() {
                   }
                 }}
               />
-            </div>
+            </div> */}
             <div className={styles["sidebar-action"]}>
               <IconButton
                 icon={<SettingsIcon />}
