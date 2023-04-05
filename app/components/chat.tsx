@@ -170,17 +170,17 @@ function PromptToast(props: {
                         </option>
                       ))}
                     </select>
-                    <input
+                    <textarea
                       value={c.content}
-                      type="text"
+                      rows={1}
                       className={chatStyle["context-content"]}
-                      onChange={(e) =>
+                      onInput={(e) =>
                         updateContextPrompt(i, {
                           ...c,
-                          content: e.target.value as any,
+                          content: e.currentTarget.value as any,
                         })
                       }
-                    ></input>
+                    ></textarea>
                     <IconButton
                       icon={<DeleteIcon />}
                       className={chatStyle["context-delete-button"]}
