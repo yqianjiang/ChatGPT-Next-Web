@@ -44,6 +44,14 @@
       flex: 1;
       max-width: 100%;
       text-align: left;
+      appearance: none;
+      border-radius: 10px;
+      border: var(--border-in-light);
+      min-height: 36px;
+      box-sizing: border-box;
+      background: var(--white);
+      color: var(--black);
+      padding: 8px 10px;
     }
 
     .context-delete-button {
