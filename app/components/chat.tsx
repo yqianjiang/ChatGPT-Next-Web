@@ -507,6 +507,14 @@ export function Chat(props: {
   return (
     <div className={styles.chat} key={session.id}>
       <div className={styles["window-header"]}>
+        <div className={styles["window-action-button"] + " " + styles.mobile}>
+            <IconButton
+              icon={<ReturnIcon />}
+              bordered
+              title={Locale.Chat.Actions.ChatList}
+              onClick={props?.showSideBar}
+            />
+        </div>
         <div className={styles["window-header-title"]}>
           <div
             className={`${styles["window-header-main-title"]} ${styles["chat-body-title"]}`}
@@ -526,14 +534,6 @@ export function Chat(props: {
           </div>
         </div>
         <div className={styles["window-actions"]}>
-          <div className={styles["window-action-button"] + " " + styles.mobile}>
-            <IconButton
-              icon={<ReturnIcon />}
-              bordered
-              title={Locale.Chat.Actions.ChatList}
-              onClick={props?.showSideBar}
-            />
-          </div>
           <div className={styles["window-action-button"]}>
             <IconButton
               icon={<BrainIcon />}
