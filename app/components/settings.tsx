@@ -128,6 +128,19 @@ export function Settings(props: { closeSettings: () => void }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    const keydownEvent = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        props.closeSettings();
+      }
+    };
+    document.addEventListener("keydown", keydownEvent);
+    return () => {
+      document.removeEventListener("keydown", keydownEvent);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <ErrorBoundary>
       <div className={styles["window-header"]}>
@@ -143,7 +156,14 @@ export function Settings(props: { closeSettings: () => void }) {
           <div className={styles["window-action-button"]}>
             <IconButton
               icon={<ClearIcon />}
-              onClick={clearSessions}
+              onClick={() => {
+                const confirmed = window.confirm(
+                  `${Locale.Settings.Actions.ConfirmClearAll.Confirm}`,
+                );
+                if (confirmed) {
+                  clearSessions();
+                }
+              }}
               bordered
               title={Locale.Settings.Actions.ClearAll}
             />
@@ -151,7 +171,14 @@ export function Settings(props: { closeSettings: () => void }) {
           <div className={styles["window-action-button"]}>
             <IconButton
               icon={<ResetIcon />}
-              onClick={resetConfig}
+              onClick={() => {
+                const confirmed = window.confirm(
+                  `${Locale.Settings.Actions.ConfirmResetAll.Confirm}`,
+                );
+                if (confirmed) {
+                  resetConfig();
+                }
+              }}
               bordered
               title={Locale.Settings.Actions.ResetAll}
             />
