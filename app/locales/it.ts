@@ -19,6 +19,7 @@ const it: LocaleType = {
       Copy: "Copia",
       Stop: "Stop",
       Retry: "Riprova",
+      Delete: "Delete",
     },
     Rename: "Rinomina Chat",
     Typing: "Typing…",
@@ -106,6 +107,11 @@ const it: LocaleType = {
       ListCount: (builtin: number, custom: number) =>
         `${builtin} built-in, ${custom} user-defined`,
       Edit: "Modifica",
+      Modal: {
+        Title: "Prompt List",
+        Add: "Add One",
+        Search: "Search Prompts",
+      },
     },
     HistoryCount: {
       Title: "Conteggio dei messaggi allegati",

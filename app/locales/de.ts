@@ -19,6 +19,7 @@ const de: LocaleType = {
       Copy: "Kopieren",
       Stop: "Stop",
       Retry: "Wiederholen",
+      Delete: "Delete",
     },
     Rename: "Chat umbenennen",
     Typing: "Tippen...",
@@ -106,6 +107,11 @@ const de: LocaleType = {
       ListCount: (builtin: number, custom: number) =>
         `${builtin} integriert, ${custom} benutzerdefiniert`,
       Edit: "Bearbeiten",
+      Modal: {
+        Title: "Prompt List",
+        Add: "Add One",
+        Search: "Search Prompts",
+      },
     },
     HistoryCount: {
       Title: "Anzahl der angehängten Nachrichten",
